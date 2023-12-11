@@ -1,9 +1,9 @@
 import './App.css';
-
+import NavBar from './Components/navbar';
 function App() {
   return (
     <>
-      <h1>Ankit Khanal</h1>
+      <NavBar/>
     </>
   );
 }

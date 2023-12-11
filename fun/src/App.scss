@@ -2,4 +2,136 @@
     margin:0px;
     padding:0px;
     box-sizing:border-box;
+    font-family: sans-serif;
+}
+body{
+    background: #f1f1f1;
+    scroll-behavior: smooth;
+}
+
+
+@mixin center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav{
+    height:auto;
+    width:100vw;
+    padding:0px 20px 0px 20px;
+    margin-top:10px;
+    @include center();
+    justify-content: space-between;
+    .bars,.mode,.fb,.insta,.github{
+        height:20px;
+        margin:0px 10px 0px 10px;
+        padding:10px;
+        border-radius:50%;
+        color:#4f6591;
+        cursor:pointer;
+    }
+    .bars,.mode{
+        height:25px;
+        font-size: 20px;
+    }
+    .mode{
+        color:#354765;
+    }
+    .fb,.insta,.github{
+        background: white;
+        box-shadow:0 0.125rem 0.25rem rgba(0,0,0,.05);
+        transition:0.2s ease-in-out;
+        &:hover{
+            color:cornflowerblue;
+        }
+    }
+    button{
+        height:40px;
+        width:90px;
+        color:white;
+        font-weight: bold;
+        font-size: 15px;
+        background: #fe655c;
+        border:none;
+        outline:none;
+        border-radius: 20px;
+        transition:0.2s ease-in-out;
+        user-select: none;
+        cursor: pointer;
+        &:hover{
+            background: #fe4d43;
+        }
+    }
+}
+aside{
+    position: absolute;
+    height:300px;
+    width:70px;
+    @include center();
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    margin:200px 0px 0px 15px;
+    box-shadow: 0 0 0.4rem 0.2rem rgba(0,0,0,.05);
+    visibility: visible;
+    ul{
+        list-style-type: none;
+        width:80%;
+        li{
+            height:50px;
+            width:100%;
+            margin:20px 0px 20px 0px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+            padding:10px 0px;
+            opacity:0.9;
+            user-select: none;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        .sideicon{
+            height:20px;
+            color:#354765;
+            padding-bottom:5px;
+        }
+        .li-x{
+            height:50px;
+            padding-bottom: 10px;
+            .x{
+                font-size: 30px;
+                font-weight: lighter;
+                color:#354765;
+                opacity:0.5;
+                &:hover{
+                    opacity:1;
+                }
+            }
+        }
+    }
+}
+.toggleleft{
+    animation:fadeout 0.5s forwards;
+}
+@keyframes fadeout{
+    0%{
+        margin-left:15px; 
+    }
+    100%{
+        margin-left:-100px; 
+    }
+}
+.toggleright{
+    animation:fadein 0.5s forwards;
+}
+@keyframes fadein{
+    0%{
+        margin-left:-100px; 
+    }
+    100%{
+        margin-left:15px; 
+    }
 }
