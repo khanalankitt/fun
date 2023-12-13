@@ -2,27 +2,26 @@
     margin:0px;
     padding:0px;
     box-sizing:border-box;
-    font-family: sans-serif;
+    font-family:sans-serif;
 }
 body{
-    background: #f1f1f1;
+    background: #f5f7fa;
     scroll-behavior: smooth;
 }
-
-
 @mixin center(){
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-
 nav{
-    height:auto;
+    position: fixed;
+    height:60px;
+    top:0px;
     width:100vw;
     padding:0px 20px 0px 20px;
-    margin-top:10px;
     @include center();
+    z-index: 10;
+    backdrop-filter: blur(50px);
     justify-content: space-between;
     .bars,.mode,.fb,.insta,.github{
         height:20px;
@@ -66,19 +65,23 @@ nav{
     }
 }
 aside{
-    position: absolute;
+    position: fixed;
     height:300px;
     width:70px;
     @include center();
     justify-content: space-around;
     flex-direction: column;
     border-radius: 10px;
-    margin:200px 0px 0px 15px;
+    margin:150px 0px 0px 15px;
     box-shadow: 0 0 0.4rem 0.2rem rgba(0,0,0,.05);
     visibility: visible;
     ul{
         list-style-type: none;
         width:80%;
+        a{
+            text-decoration: none;
+            color:#354765;
+        }
         li{
             height:50px;
             width:100%;
@@ -89,6 +92,7 @@ aside{
             padding:10px 0px;
             opacity:0.9;
             user-select: none;
+            text-decoration: none;
             &:hover{
                 opacity: 1;
             }
@@ -134,4 +138,152 @@ aside{
     100%{
         margin-left:15px; 
     }
+}
+
+.me{
+    margin:80px auto;
+    height:300px;
+    width:1000px;
+    background: white;
+    border-radius: 10px;
+    @include center();
+    justify-content: space-evenly;
+    box-shadow: 0 0 0.4rem 0.2rem rgba(0,0,0,.03);
+    .image{
+        height:90%;
+        width:27%;
+        @include center;
+        img{
+            height:100%;
+            width:100%;
+            border-radius: 50%;
+            object-fit: cover;
+            filter:brightness(120%);
+            padding:5px;
+            border:2px solid #4f6591;
+            border-style: dashed;
+        }
+    }
+    .aboutme{
+        height:90%;
+        width:60%;
+        @include center;
+        flex-direction: column;
+        h1{
+            text-align: center;
+            margin-bottom:10px;
+            font-size: 3rem;
+            color:#354765;
+        }
+        p{
+            width:100%;
+            text-align:center;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color:#4f6591;
+        }
+        button{
+            height:40px;
+            width:180px;
+            color:white;
+            font-weight: bold;
+            font-size: 15px;
+            background:#4f6591;
+            border:none;
+            outline:none;
+            border-radius: 20px;
+            transition:0.2s ease-in-out;
+            user-select: none;
+            cursor: pointer;
+            &:hover{
+                background:#354765;
+            }
+        }
+    }
+}
+
+.item{
+    height:270px;
+    width:230px;
+    @include center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right:30px;
+    .item-image{
+        height:60%;
+        width:100%;
+        img{
+            height:100%;
+            width:100%;
+            object-fit:cover;
+            object-position: top;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+    }
+    .item-text{
+        h3,p{
+            margin-bottom: -5px;
+        }
+        p{
+            font-size: 0.9rem;
+        }
+    }
+}
+.home-projects{
+    margin:auto;
+    height:550px;
+    width:1000px;
+    background: white;
+    border-radius: 20px;
+    @include center;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 0 0 0.4rem 0.2rem rgba(0,0,0,.03);
+    .intro{
+        height:20%;
+        @include center;
+        flex-direction: column;
+        margin-top: 10px;
+        h1,p{
+            text-align: center;
+            color:#354765;
+        }
+        p{
+            width:70%;
+            margin-top: 10px;
+            color:#4f6591
+        }
+    }
+    .items{
+        @include center;
+        justify-content: space-around;
+    }
+    button{
+        height:40px;
+        width:180px;
+        color:white;
+        font-weight: bold;
+        font-size: 15px;
+        background:#4f6591;
+        border:none;
+        outline:none;
+        border-radius: 20px;
+        transition:0.2s ease-in-out;
+        user-select: none;
+        cursor: pointer;
+        margin-bottom:15px;
+        &:hover{
+            background:#354765;
+        }
+    }
+}
+
+
+
+.skills{
+    margin:80px auto;
+    height:300px;
+    width:1000px;
+    background: white;
 }

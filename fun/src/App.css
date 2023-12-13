@@ -6,18 +6,22 @@
 }
 
 body {
-  background: #f1f1f1;
+  background: #f5f7fa;
   scroll-behavior: smooth;
 }
 
 nav {
-  height: auto;
+  position: fixed;
+  height: 60px;
+  top: 0px;
   width: 100vw;
   padding: 0px 20px 0px 20px;
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
   justify-content: space-between;
 }
 nav .bars, nav .mode, nav .fb, nav .insta, nav .github {
@@ -64,7 +68,7 @@ nav button:hover {
 }
 
 aside {
-  position: absolute;
+  position: fixed;
   height: 300px;
   width: 70px;
   display: flex;
@@ -73,13 +77,17 @@ aside {
   justify-content: space-around;
   flex-direction: column;
   border-radius: 10px;
-  margin: 200px 0px 0px 15px;
+  margin: 150px 0px 0px 15px;
   box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.05);
   visibility: visible;
 }
 aside ul {
   list-style-type: none;
   width: 80%;
+}
+aside ul a {
+  text-decoration: none;
+  color: #354765;
 }
 aside ul li {
   height: 50px;
@@ -93,6 +101,7 @@ aside ul li {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  text-decoration: none;
 }
 aside ul li:hover {
   opacity: 1;
@@ -139,4 +148,169 @@ aside ul .li-x .x:hover {
   100% {
     margin-left: 15px;
   }
+}
+.me {
+  margin: 80px auto;
+  height: 300px;
+  width: 1000px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.03);
+}
+.me .image {
+  height: 90%;
+  width: 27%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.me .image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(120%);
+  padding: 5px;
+  border: 2px solid #4f6591;
+  border-style: dashed;
+}
+.me .aboutme {
+  height: 90%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.me .aboutme h1 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 3rem;
+  color: #354765;
+}
+.me .aboutme p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #4f6591;
+}
+.me .aboutme button {
+  height: 40px;
+  width: 180px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  background: #4f6591;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  transition: 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.me .aboutme button:hover {
+  background: #354765;
+}
+
+.item {
+  height: 270px;
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-right: 30px;
+}
+.item .item-image {
+  height: 60%;
+  width: 100%;
+}
+.item .item-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.item .item-text h3, .item .item-text p {
+  margin-bottom: -5px;
+}
+.item .item-text p {
+  font-size: 0.9rem;
+}
+
+.home-projects {
+  margin: auto;
+  height: 550px;
+  width: 1000px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.03);
+}
+.home-projects .intro {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.home-projects .intro h1, .home-projects .intro p {
+  text-align: center;
+  color: #354765;
+}
+.home-projects .intro p {
+  width: 70%;
+  margin-top: 10px;
+  color: #4f6591;
+}
+.home-projects .items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.home-projects button {
+  height: 40px;
+  width: 180px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  background: #4f6591;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  transition: 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.home-projects button:hover {
+  background: #354765;
+}
+
+.skills {
+  margin: 80px auto;
+  height: 300px;
+  width: 1000px;
+  background: white;
 }/*# sourceMappingURL=app.css.map */
