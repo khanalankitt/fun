@@ -29,7 +29,9 @@
                         <FontAwesomeIcon className="insta" icon="fa-brands fa-instagram" />
                         <FontAwesomeIcon className="github" icon="fa-brands fa-github" />
                     </ul>
-                    <button className='right'>Hire Me</button>
+                    <Link to="/contact">
+                        <button className='right'>Hire Me</button>
+                    </Link>
                 </nav>
                 <SideBar/>
             </>

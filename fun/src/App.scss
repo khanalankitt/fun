@@ -3,8 +3,10 @@
     padding:0px;
     box-sizing:border-box;
     font-family:sans-serif;
+    max-width: 1920px;
 }
 body{
+    margin:auto;
     background: #f5f7fa;
     scroll-behavior: smooth;
 }
@@ -282,8 +284,37 @@ aside{
 
 
 .skills{
-    margin:80px auto;
-    height:300px;
+    margin:80px auto 20px auto;
+    height: 250px;
     width:1000px;
-    background: white;
+    background:white;
+    border-radius: 20px;
+    box-shadow: 0 0 0.4rem 0.2rem rgba(0,0,0,.03);
+
+    h1{
+        top:20px;
+        text-align: center;
+        color:#354765;
+    }
+    .icon4{
+        animation-duration: 4s;
+    }
+    .skills-icon{
+        height:60px;
+        width:60px;
+        padding:20px;
+        margin:20px 25px 0px 25px;
+        transition:0.1s ease-in-out;
+        border-radius: 10px;
+    }
+    .span{
+        display: flex;
+        color:#4f6591;
+        font-size: 5rem;
+        font-family: monospace;
+        margin-top: -25px;
+        justify-content: center;
+        opacity:0.1;
+        user-select: none;
+    }
 }

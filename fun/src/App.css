@@ -3,9 +3,11 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: sans-serif;
+  max-width: 1920px;
 }
 
 body {
+  margin: auto;
   background: #f5f7fa;
   scroll-behavior: smooth;
 }
@@ -309,8 +311,38 @@ aside ul .li-x .x:hover {
 }
 
 .skills {
-  margin: 80px auto;
-  height: 300px;
+  margin: 80px auto 20px auto;
+  height: 250px;
   width: 1000px;
   background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.03);
+}
+.skills h1 {
+  top: 20px;
+  text-align: center;
+  color: #354765;
+}
+.skills .icon4 {
+  animation-duration: 4s;
+}
+.skills .skills-icon {
+  height: 60px;
+  width: 60px;
+  padding: 20px;
+  margin: 20px 25px 0px 25px;
+  transition: 0.1s ease-in-out;
+  border-radius: 10px;
+}
+.skills .span {
+  display: flex;
+  color: #4f6591;
+  font-size: 5rem;
+  font-family: monospace;
+  margin-top: -25px;
+  justify-content: center;
+  opacity: 0.1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=app.css.map */
