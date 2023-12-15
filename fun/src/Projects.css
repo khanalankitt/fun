@@ -37,9 +37,6 @@
      object-position: top;
   border-radius: 10px;
 }
-.projects-container .wrapper .image img:hover {
-  transform: scale(1.02);
-}
 .projects-container .wrapper .text {
   margin: 15px;
   width: 50%;
