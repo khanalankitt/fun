@@ -1,9 +1,11 @@
+
 *{
     margin:0px;
     padding:0px;
     box-sizing:border-box;
     font-family:sans-serif;
     max-width: 1920px;
+    user-select: none;
 }
 body{
     margin:auto;
@@ -17,7 +19,7 @@ body{
 }
 nav{
     position: fixed;
-    height:60px;
+    height:50px;
     top:0px;
     width:100vw;
     padding:0px 20px 0px 20px;
@@ -44,8 +46,20 @@ nav{
         background: white;
         box-shadow:0 0.125rem 0.25rem rgba(0,0,0,.05);
         transition:0.2s ease-in-out;
+    }
+    .fb{
         &:hover{
-            color:cornflowerblue;
+            color:blue;
+        }
+    }
+    .insta{
+        &:hover{
+            color:  #ee2a7b;
+        }
+    }
+    .github{
+        &:hover{
+            color:  black;
         }
     }
     button{
@@ -59,7 +73,7 @@ nav{
         outline:none;
         border-radius: 20px;
         transition:0.2s ease-in-out;
-        user-select: none;
+        // user-select: none;
         cursor: pointer;
         &:hover{
             background: #fe4d43;
@@ -93,7 +107,7 @@ aside{
             font-size: 14px;
             padding:10px 0px;
             opacity:0.9;
-            user-select: none;
+            // user-select: none;
             text-decoration: none;
             &:hover{
                 opacity: 1;
@@ -143,7 +157,7 @@ aside{
 }
 
 .me{
-    margin:80px auto;
+    margin:50px auto;
     height:300px;
     width:1000px;
     background: white;
@@ -195,7 +209,7 @@ aside{
             outline:none;
             border-radius: 20px;
             transition:0.2s ease-in-out;
-            user-select: none;
+            // user-select: none;
             cursor: pointer;
             &:hover{
                 background:#354765;
@@ -229,6 +243,9 @@ aside{
         }
         p{
             font-size: 0.9rem;
+        }
+        .alwaysBlue{
+            color:cornflowerblue;
         }
     }
 }
@@ -272,7 +289,7 @@ aside{
         outline:none;
         border-radius: 20px;
         transition:0.2s ease-in-out;
-        user-select: none;
+        // user-select: none;
         cursor: pointer;
         margin-bottom:15px;
         &:hover{
@@ -315,6 +332,16 @@ aside{
         margin-top: -25px;
         justify-content: center;
         opacity:0.1;
-        user-select: none;
+        // user-select: none;
     }
 }
+.dark-mode {
+    background: #333;
+    color: white !important;
+    .alwaysBlue{
+        color:cornflowerblue;
+    }
+    h1,p{
+        color: white !important;
+    }
+} 

@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { useDarkMode } from '../DarkModeContext'; // Import useDarkMode hook
 import '../App.css';
 function Item(props){
+    const { isDarkMode } = useDarkMode();
     return(
         <>
             <div className="item">
@@ -13,7 +15,12 @@ function Item(props){
                     <h3>{props.title}</h3><br />
                     <p>{props.description}</p><br />
                     <a href={props.link} target='_blank' rel="noreferrer" style={{textDecorationLine:"none",color:"cornflowerblue"}}>
-                        <p style={{color:"cornflowerblue",cursor:"pointer",width:"80px"}}>Live Demo</p>
+                        <p
+                            style={{color:"cornflowerblue",cursor:"pointer",width:"80px"}}
+                            className={`alwaysBlue ${isDarkMode ? 'alwaysBlue' : ''}`}
+                        >
+                            Live Demo
+                        </p>
                     </a>
                 </div>
             </div>
@@ -38,14 +45,14 @@ let items={
         description:"A website to educate teenagers about effects of smoking.",
         imagesource:"smokefree.png",
         link:"https://khanalankitt.github.io/Smokefree"
-
     }
 
 }
 export function Me(props){
+    const { isDarkMode } = useDarkMode(); // Use useDarkMode hook
     return(
         <>
-        <div className="me">
+        <div className={`me ${isDarkMode ? 'dark-mode' : ''}`}>
             <div className="image">
                 <img src="me.png" alt="" />
             </div>
@@ -65,6 +72,10 @@ function Home(){
         function handleMouseover(param){
             setText(param);
         }
+        useEffect(() => {
+            window.scrollTo(0, 0); 
+          }, []);
+          const { isDarkMode } = useDarkMode(); // Use useDarkMode hook
     return(
         <>
             <Me 
@@ -74,8 +85,8 @@ function Home(){
                     of technology to transform the world, and 
                     I'm dedicated to honing my skills to make that impact."
             />
-            <div className="home-projects">
-                <div className="intro">
+            <div className={`home-projects ${isDarkMode ? 'dark-mode' : ''}`}>
+                <div className={`intro ${isDarkMode ? 'dark-mode' : ''}`}>
                     <h1>Featured Projects</h1>
                     <p>Brief intro goes here. My main experience lies in building websites,
                         web apps and portfolios.I am currently working in personal projects.
@@ -90,7 +101,7 @@ function Home(){
                     <button>More Projects →</button>
                 </Link>
             </div>
-            <div className="skills">
+            <div className={`skills ${isDarkMode ? 'dark-mode' : ''}`}>
                 <br />
                 <h1>Skills</h1>
                 <marquee behavior="alternate">
@@ -100,7 +111,7 @@ function Home(){
                     <FontAwesomeIcon className="skills-icon icon4" spin style={{color: "#5ed3f3",}} onMouseOver={() => handleMouseover("ReactJS")} icon="fa-brands fa-react" />
                     <FontAwesomeIcon className="skills-icon icon5" style={{color: "#c76494",}} onMouseOver={() => handleMouseover("SASS")} icon="fa-brands fa-sass" />
                 </marquee>
-                <span className="span">
+                <span className={`span ${isDarkMode ? 'dark-mode' : ''}`}>
                     {text}
                 </span>
             </div>

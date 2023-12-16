@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: sans-serif;
   max-width: 1920px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -14,7 +17,7 @@ body {
 
 nav {
   position: fixed;
-  height: 60px;
+  height: 50px;
   top: 0px;
   width: 100vw;
   padding: 0px 20px 0px 20px;
@@ -46,8 +49,14 @@ nav .fb, nav .insta, nav .github {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
   transition: 0.2s ease-in-out;
 }
-nav .fb:hover, nav .insta:hover, nav .github:hover {
-  color: cornflowerblue;
+nav .fb:hover {
+  color: blue;
+}
+nav .insta:hover {
+  color: #ee2a7b;
+}
+nav .github:hover {
+  color: black;
 }
 nav button {
   height: 40px;
@@ -60,9 +69,6 @@ nav button {
   outline: none;
   border-radius: 20px;
   transition: 0.2s ease-in-out;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   cursor: pointer;
 }
 nav button:hover {
@@ -100,9 +106,6 @@ aside ul li {
   font-size: 14px;
   padding: 10px 0px;
   opacity: 0.9;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   text-decoration: none;
 }
 aside ul li:hover {
@@ -152,7 +155,7 @@ aside ul .li-x .x:hover {
   }
 }
 .me {
-  margin: 80px auto;
+  margin: 50px auto;
   height: 300px;
   width: 1000px;
   background: white;
@@ -213,9 +216,6 @@ aside ul .li-x .x:hover {
   outline: none;
   border-radius: 20px;
   transition: 0.2s ease-in-out;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   cursor: pointer;
 }
 .me .aboutme button:hover {
@@ -251,6 +251,9 @@ aside ul .li-x .x:hover {
 }
 .item .item-text p {
   font-size: 0.9rem;
+}
+.item .item-text .alwaysBlue {
+  color: cornflowerblue;
 }
 
 .home-projects {
@@ -300,9 +303,6 @@ aside ul .li-x .x:hover {
   outline: none;
   border-radius: 20px;
   transition: 0.2s ease-in-out;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
   cursor: pointer;
   margin-bottom: 15px;
 }
@@ -342,7 +342,15 @@ aside ul .li-x .x:hover {
   margin-top: -25px;
   justify-content: center;
   opacity: 0.1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+}
+
+.dark-mode {
+  background: #333;
+  color: white !important;
+}
+.dark-mode .alwaysBlue {
+  color: cornflowerblue;
+}
+.dark-mode h1, .dark-mode p {
+  color: white !important;
 }/*# sourceMappingURL=App.css.map */

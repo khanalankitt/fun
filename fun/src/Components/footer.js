@@ -4,10 +4,10 @@ export default function Footer(){
     );
 }
 let styles={
-    height:"30px",
+    height:"40px",
     width:"90vw",
     margin:"auto",
     textAlign:"center",
     padding:"5px",
-    bottom:"0"
+    bottom:"10"
 }

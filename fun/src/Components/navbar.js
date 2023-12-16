@@ -1,3 +1,4 @@
+    import { useDarkMode } from '../DarkModeContext'; 
     import { Outlet, Link } from "react-router-dom";
     import '../App.css';
     import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -5,7 +6,6 @@
     import { fab } from '@fortawesome/free-brands-svg-icons'
     import { fas } from '@fortawesome/free-solid-svg-icons';  
     library.add(fas,fab);
-
     function toggle(){
         let aside = document.querySelector(".aside");
         if(aside.classList.contains("toggleleft")){
@@ -17,17 +17,24 @@
         }
     }
     function NavBar(){
+        const { toggleDarkMode } = useDarkMode(); 
         return(
             <>
                 <nav>
                     <ul className='left'>
                         <FontAwesomeIcon className="bars" onClick={toggle} icon="fa-solid fa-bars" />
-                        <FontAwesomeIcon className="mode" icon="fa-solid fa-circle-half-stroke" />
+                        <FontAwesomeIcon className="mode" onClick={toggleDarkMode} icon="fa-solid fa-circle-half-stroke" />
                     </ul>
-                    <ul className='middle'> 
-                        <FontAwesomeIcon className="fb" icon="fa-brands fa-facebook" />
-                        <FontAwesomeIcon className="insta" icon="fa-brands fa-instagram" />
-                        <FontAwesomeIcon className="github" icon="fa-brands fa-github" />
+                    <ul className='middle'>
+                        <a href="https://www.facebook.com/khanalankitt" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon className="fb" icon="fa-brands fa-facebook" />
+                        </a>
+                        <a href="https://www.instagram.com/akhanal749/" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon className="insta" icon="fa-brands fa-instagram" />
+                        </a>
+                        <a href="https://www.github.com/khanalankitt" target="_blank" rel="noreferrer">
+                            <FontAwesomeIcon className="github" icon="fa-brands fa-github" />
+                        </a>
                     </ul>
                     <Link to="/contact">
                         <button className='right'>Hire Me</button>

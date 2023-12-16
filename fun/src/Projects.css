@@ -69,10 +69,68 @@
   background: #354765;
 }
 
-hr {
-  height: 1px;
-  width: 100%;
-  background: #4f6591;
+.form-container {
+  border-radius: 20px;
+  margin: 50px auto;
+  height: 450px;
+  width: 1000px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 0.4rem 0.2rem rgba(0, 0, 0, 0.03);
+}
+.form-container h1 {
+  margin-top: 40px;
+  color: #354765;
+}
+.form-container form {
+  margin: auto;
+}
+.form-container form input, .form-container form textarea {
+  border: 2px solid #ebeff6;
+  border-radius: 10px;
+  color: #354765;
+  padding: 10px;
   outline: none;
+}
+.form-container form input {
+  height: 40px;
+  width: 300px;
+  font-size: 15px;
+}
+.form-container form textarea {
+  padding: 10px;
+  margin-top: 20px;
+}
+.form-container form :nth-child(1) {
+  margin-right: 10px;
+}
+.form-container form :nth-child(6) {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  background: #4f6591;
+  color: white;
   border: none;
+  outline: none;
+  border-radius: 20px;
+  transition: 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.form-container form :nth-child(6):hover {
+  background: #354765;
+}
+.form-container form ::-moz-placeholder {
+  font-size: 15px;
+  opacity: 0.7;
+}
+.form-container form ::placeholder {
+  font-size: 15px;
+  opacity: 0.7;
 }/*# sourceMappingURL=Projects.css.map */
