@@ -3,24 +3,23 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: sans-serif;
-  max-width: 1920px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 
 body {
-  margin: auto;
-  background: #f5f7fa;
+  margin: 0 auto;
+  max-width: 1920px;
   scroll-behavior: smooth;
 }
 
 nav {
   position: fixed;
-  height: 50px;
+  height: 60px;
   top: 0px;
-  width: 100vw;
-  padding: 0px 20px 0px 20px;
+  width: clamp(0px, 100vw, 1920px);
+  padding: 0px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,7 +30,7 @@ nav {
 }
 nav .bars, nav .mode, nav .fb, nav .insta, nav .github {
   height: 20px;
-  margin: 0px 10px 0px 10px;
+  margin: 0px 10px;
   padding: 10px;
   border-radius: 50%;
   color: #4f6591;
@@ -60,16 +59,22 @@ nav .github:hover {
 }
 nav button {
   height: 40px;
-  width: 90px;
+  width: 180px;
   color: white;
   font-weight: bold;
   font-size: 15px;
-  background: #fe655c;
   border: none;
   outline: none;
   border-radius: 20px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  background: #4f6591;
+  width: 90px;
+  background: #fe655c;
+  margin-right: 20px;
+}
+nav button:hover {
+  background: #354765;
 }
 nav button:hover {
   background: #fe4d43;
@@ -140,6 +145,7 @@ aside ul .li-x .x:hover {
   }
   100% {
     margin-left: -100px;
+    display: none;
   }
 }
 .toggleright {
@@ -155,7 +161,7 @@ aside ul .li-x .x:hover {
   }
 }
 .me {
-  margin: 50px auto;
+  margin: 60px auto;
   height: 300px;
   width: 1000px;
   background: white;
@@ -202,7 +208,7 @@ aside ul .li-x .x:hover {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #4f6591;
 }
 .me .aboutme button {
@@ -211,12 +217,12 @@ aside ul .li-x .x:hover {
   color: white;
   font-weight: bold;
   font-size: 15px;
-  background: #4f6591;
   border: none;
   outline: none;
   border-radius: 20px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  background: #4f6591;
 }
 .me .aboutme button:hover {
   background: #354765;
@@ -298,12 +304,12 @@ aside ul .li-x .x:hover {
   color: white;
   font-weight: bold;
   font-size: 15px;
-  background: #4f6591;
   border: none;
   outline: none;
   border-radius: 20px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  background: #4f6591;
   margin-bottom: 15px;
 }
 .home-projects button:hover {
@@ -311,7 +317,7 @@ aside ul .li-x .x:hover {
 }
 
 .skills {
-  margin: 80px auto 20px auto;
+  margin: 60px auto 20px auto;
   height: 250px;
   width: 1000px;
   background: white;
@@ -345,12 +351,29 @@ aside ul .li-x .x:hover {
 }
 
 .dark-mode {
-  background: #333;
+  background: #1e2738;
   color: white !important;
+}
+.dark-mode .fb, .dark-mode .insta, .dark-mode .github {
+  background: #19202e;
+  color: #a5b3ce !important;
+}
+.dark-mode .bars, .dark-mode .mode, .dark-mode li, .dark-mode .sideicon {
+  color: #a5b3ce !important;
+}
+.dark-mode h1, .dark-mode h2 {
+  color: white !important;
+}
+.dark-mode p {
+  color: #a5b3ce !important;
 }
 .dark-mode .alwaysBlue {
-  color: cornflowerblue;
+  color: cornflowerblue !important;
 }
-.dark-mode h1, .dark-mode p {
-  color: white !important;
+.dark-mode .items {
+  background: #1e2738;
+}
+
+.dark-mode-body {
+  background: #19202e;
 }/*# sourceMappingURL=App.css.map */

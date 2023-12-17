@@ -18,9 +18,11 @@
     }
     function NavBar(){
         const { toggleDarkMode } = useDarkMode(); 
+        const { isDarkMode } = useDarkMode();
+
         return(
             <>
-                <nav>
+                <nav className={`${isDarkMode ? 'dark-mode' : ''}`}>
                     <ul className='left'>
                         <FontAwesomeIcon className="bars" onClick={toggle} icon="fa-solid fa-bars" />
                         <FontAwesomeIcon className="mode" onClick={toggleDarkMode} icon="fa-solid fa-circle-half-stroke" />
@@ -46,9 +48,10 @@
     }
 
     function SideBar(){
+        const { isDarkMode } = useDarkMode();
         return(
             <>
-                <aside className='aside'>
+                <aside className={`aside ${isDarkMode ? 'dark-mode' : ''}`}>
                     <ul>
                     <Link to="/">
                         <li>

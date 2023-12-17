@@ -133,4 +133,20 @@
 .form-container form ::placeholder {
   font-size: 15px;
   opacity: 0.7;
+}
+
+.dark-mode {
+  background: #1e2738;
+}
+.dark-mode input, .dark-mode textarea {
+  color: white !important;
+  background: #273248;
+  border: none !important;
+  outline: none !important;
+}
+.dark-mode ::-moz-placeholder {
+  color: #889bbe;
+}
+.dark-mode ::placeholder {
+  color: #889bbe;
 }/*# sourceMappingURL=Projects.css.map */

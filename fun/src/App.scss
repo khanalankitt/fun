@@ -4,13 +4,28 @@
     padding:0px;
     box-sizing:border-box;
     font-family:sans-serif;
-    max-width: 1920px;
     user-select: none;
 }
 body{
-    margin:auto;
-    background: #f5f7fa;
+    margin:0 auto;
+    max-width: 1920px;
     scroll-behavior: smooth;
+}
+@mixin button{
+    height:40px;
+    width:180px;
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    border:none;
+    outline:none;
+    border-radius: 20px;
+    transition:0.2s ease-in-out;
+    cursor: pointer;
+    background:#4f6591;
+    &:hover{
+        background:#354765;
+    }
 }
 @mixin center(){
     display: flex;
@@ -19,17 +34,17 @@ body{
 }
 nav{
     position: fixed;
-    height:50px;
+    height:60px;
     top:0px;
-    width:100vw;
-    padding:0px 20px 0px 20px;
+    width:clamp(0px,100vw,1920px);
+    padding:0px 20px;
     @include center();
     z-index: 10;
     backdrop-filter: blur(50px);
     justify-content: space-between;
     .bars,.mode,.fb,.insta,.github{
         height:20px;
-        margin:0px 10px 0px 10px;
+        margin:0px 10px;
         padding:10px;
         border-radius:50%;
         color:#4f6591;
@@ -63,21 +78,13 @@ nav{
         }
     }
     button{
-        height:40px;
+        @include button;
         width:90px;
-        color:white;
-        font-weight: bold;
-        font-size: 15px;
         background: #fe655c;
-        border:none;
-        outline:none;
-        border-radius: 20px;
-        transition:0.2s ease-in-out;
-        // user-select: none;
-        cursor: pointer;
         &:hover{
             background: #fe4d43;
         }
+        margin-right:20px;
     }
 }
 aside{
@@ -107,7 +114,6 @@ aside{
             font-size: 14px;
             padding:10px 0px;
             opacity:0.9;
-            // user-select: none;
             text-decoration: none;
             &:hover{
                 opacity: 1;
@@ -141,7 +147,8 @@ aside{
         margin-left:15px; 
     }
     100%{
-        margin-left:-100px; 
+        margin-left:-100px;
+        display: none; 
     }
 }
 .toggleright{
@@ -155,9 +162,8 @@ aside{
         margin-left:15px; 
     }
 }
-
 .me{
-    margin:50px auto;
+    margin:60px auto;
     height:300px;
     width:1000px;
     background: white;
@@ -195,25 +201,11 @@ aside{
             width:100%;
             text-align:center;
             margin-bottom: 20px;
-            font-size: 0.9rem;
+            font-size: 1rem;
             color:#4f6591;
         }
         button{
-            height:40px;
-            width:180px;
-            color:white;
-            font-weight: bold;
-            font-size: 15px;
-            background:#4f6591;
-            border:none;
-            outline:none;
-            border-radius: 20px;
-            transition:0.2s ease-in-out;
-            // user-select: none;
-            cursor: pointer;
-            &:hover{
-                background:#354765;
-            }
+            @include button;
         }
     }
 }
@@ -279,29 +271,16 @@ aside{
         justify-content: space-around;
     }
     button{
-        height:40px;
-        width:180px;
-        color:white;
-        font-weight: bold;
-        font-size: 15px;
-        background:#4f6591;
-        border:none;
-        outline:none;
-        border-radius: 20px;
-        transition:0.2s ease-in-out;
-        // user-select: none;
-        cursor: pointer;
+        @include button;
         margin-bottom:15px;
-        &:hover{
-            background:#354765;
-        }
+ 
     }
 }
 
 
 
 .skills{
-    margin:80px auto 20px auto;
+    margin:60px auto 20px auto;
     height: 250px;
     width:1000px;
     background:white;
@@ -332,16 +311,34 @@ aside{
         margin-top: -25px;
         justify-content: center;
         opacity:0.1;
-        // user-select: none;
     }
 }
-.dark-mode {
-    background: #333;
+ $bodybg : #19202e;
+ $divbg: #1e2738;
+
+.dark-mode{
+    background: $divbg;    
     color: white !important;
+    .fb,.insta,.github{
+        background: $bodybg;
+        color: #a5b3ce !important;
+    }
+    .bars,.mode,li,.sideicon{
+        color: #a5b3ce !important;
+    }
+    h1,h2{
+        color:white !important;
+    }
+    p{
+        color:#a5b3ce !important;
+    }
     .alwaysBlue{
-        color:cornflowerblue;
+        color:cornflowerblue !important;
     }
-    h1,p{
-        color: white !important;
+    .items{
+        background: $divbg;
     }
-} 
+}
+.dark-mode-body{
+    background: $bodybg;
+}

@@ -127,3 +127,18 @@
 
     }
 }
+$bodybg : #19202e;
+$divbg: #1e2738;
+
+.dark-mode{
+    background: $divbg;  
+    input,textarea{
+        color:white !important;
+        background: #273248;
+        border:none  !important;
+        outline:none !important;
+    }  
+    ::placeholder{
+        color:#889bbe;
+    }
+}

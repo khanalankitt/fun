@@ -25,7 +25,7 @@
                         <img src={props.imageSource} alt="" />
                     </div>
                     <div className="text">
-                        <h2>
+                        <h2 className="projectName">
                             <b>{props.projectName}</b>
                         </h2>
                         <p>
